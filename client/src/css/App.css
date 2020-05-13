@@ -1,0 +1,67 @@
+label, h2, button, span {
+  font-family: -apple-system , BlinkMacSystemFont , "Segoe UI" , "Roboto" , "Helvetica Neue" , "Ubuntu" , sans-serif;
+  font-weight: 200;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type='text'] {
+  font-weight: 600;
+}
+
+input[type='submit'] {
+  min-width: 300px;
+  min-height: 50px;
+  background-color: rgb(217, 252, 165);
+  border-color: rgb(178, 255, 178);
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+input[type='submit']:hover {
+  background-color: rgb(196, 253, 110);
+}
+input[type='submit']:active {
+  background-color: rgb(82, 185, 87);
+}
+
+.itemLayout {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.fieldLayout {
+  display: flex;
+  flex-direction: row;
+  margin: 8px auto;
+}
+
+.textbox {
+  border-radius: 5px;
+  min-height: 24px;
+  background-color: rgb(209, 238, 209);
+  padding: 0 0 0 5px;
+}
+
+.labelHeader {
+  text-align: right;
+  padding-right: 8px;
+  min-width: 150px;
+}
+
+.errorResults {
+  background-color: rgb(255, 221, 226);
+  border: 1px solid rgb(255, 161, 161);
+  border-radius: 5px;
+  border-color: rgb(255, 161, 161);
+  min-width: 300px;
+  padding: 10px;
+}
+
+.errors {
+  font-weight: 500;
+}

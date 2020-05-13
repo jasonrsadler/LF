@@ -1,6 +1,8 @@
 # Lightfeather Code Challenge
 
 ## #1 API Endpoint
+[![CircleCI](https://circleci.com/gh/jasonrsadler/LF.svg?style=shield)](https://circleci.com/gh/jasonrsadler/LF)
+
 To run API endpoint portion:
 ```
 cd server

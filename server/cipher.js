@@ -1,3 +1,6 @@
+const fs = require('fs')
+const path = require('path')
+
 const limits = {
   lowerHighCharCode: 122,
   lowerLowCharCode: 97,
@@ -9,7 +12,7 @@ module.exports.runCipher = (offset, message) => {
   if (offset % 26 === 0) {
     return message
   }
-  const strArr = message.split('')
+  let strArr = message.split('')
   for (let ix = strArr.length - 1; ix >= 0; ix--) {
     if (isAlpha(strArr[ix])) {
       const offsetRemainder = offset % 26
@@ -22,6 +25,15 @@ module.exports.runCipher = (offset, message) => {
       strArr.splice(ix, 1, String.fromCharCode(charCode + (offset < 26 ? offset : offsetRemainder)))
     }
   }
+  const dir = path.join(__dirname, '/storage')
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir)
+  }
+  fs.writeFile(dir + '/cipher.txt', strArr.join(''), (err) => {
+    if (err) {
+      strArr = []
+    }
+  })
   return strArr.join('')
 }
 
