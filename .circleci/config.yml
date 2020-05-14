@@ -12,6 +12,9 @@ jobs:
             - run: cd server && npm install
             - run: cd server && npm run lint
             - run: cd server && npm test
+            - run: cd client && npm install
+            - run: cd client && npm run lint
+            - run: cd client && npm test
 workflows:
     build-and-test:
       jobs:

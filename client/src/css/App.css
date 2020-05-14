@@ -1,4 +1,4 @@
-label, h2, button, span {
+label, h2, button, span, .errors {
   font-family: -apple-system , BlinkMacSystemFont , "Segoe UI" , "Roboto" , "Helvetica Neue" , "Ubuntu" , sans-serif;
   font-weight: 200;
 }
@@ -21,11 +21,18 @@ input[type='submit'] {
   font-size: 18px;
   font-weight: 500;
 }
+
 input[type='submit']:hover {
   background-color: rgb(196, 253, 110);
 }
+
 input[type='submit']:active {
   background-color: rgb(82, 185, 87);
+}
+
+input[type='submit']:disabled {
+  background-color: lightgray;
+  border-color: lightgray;
 }
 
 .itemLayout {
